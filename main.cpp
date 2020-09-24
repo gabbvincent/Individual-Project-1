@@ -66,19 +66,73 @@ string toString(const Item &i) {
 
 int main() {
 
-  Item item;
-
-  initItem(item, "Chips", 2.5, 10);
-  initItem(item, "Candy bar", 1.5, 10);
-  initItem(item, "Fruit snacks", 1.0, 10);
-  initItem(item, "Water", 1.0, 10);
-  initItem(item, "Gatorade", 1.5, 10);
-
+ double usersWallet = 25.00;
   
+  // Initialize Items to store in the vending machine.
+  Item chips;
+
+  initItem(chips, "Chips", 1.75, 10);
+
+  Item candyBar;
+  initItem(candyBar, "Candy bar", 1.5, 10);
+
+  Item fruitSnacks;
+  initItem(fruitSnacks, "Fruit snacks", 1.0, 10);
+
+  Item water;
+  initItem(water, "Water", 1.0, 10);
+
+  Item gatorade;
+  initItem(gatorade, "Gatorade", 1.5, 10);
+
+  // Display the Items as a menu to the user.
+  cout << "----------------------------------------\n\n";
+
+  cout << "ID#\n";
+  cout << "1.) " << toString(chips) << "\n";
+  cout << "2.) " << toString(candyBar) << "\n";
+  cout << "3.) " << toString(fruitSnacks) << "\n";
+  cout << "4.) " << toString(water) << "\n";
+  cout << "5.) " << toString(gatorade) << "\n\n";
+
+  cout << "----------------------------------------\n";
+  
+  // Display a greeting to the user with intstructions on how to use // the vending machine and their current $balance.
+  cout << "|- Welcome Customer, Thankyou for choosing our vending machine!\n";
+
+  cout << "|- You currently have $25.00.\n";
+  cout << "|- To purchase an item, enter the ID#\n";
+  cout << "|- Enter 0 to exit to vending machine\n";
+
+  int userInput;
+
+  while (userInput != 0) {
+
+    cin >> userInput;
+
+    if (userInput == 0) {
+
+      break;
+    }else{
+
+    
+
+    }
+
+
+  }
+
+ 
 
 
 
 
+
+
+
+
+
+}
 
 
 
