@@ -59,48 +59,36 @@ string toString(const Item &i) {
   out.setf(ios::showpoint);
   out.precision(2);
 
-  out << i.name << " (price: $" << i.price << ", " << "quantity: " << i.quantity << ")";
+  out <<"["<< i.ID << "] " << i.name << " (price: $" << i.price << ", " << "quantity: " << i.quantity << ")";
 
   return out.str();
 }
 
 int main() {
 
- double usersWallet = 25.00;
+  Item vendingItem[6];
+  vendingItem[1] = { "Chips", 1.75, 10};
+  vendingItem[2] = { "Candy bar", 1.50, 10};
+  vendingItem[3] = { "Fruit snacks", 1.0, 10};
+  vendingItem[4] = { "Water", 1.0, 10};
+  vendingItem[5] = { "Gatorade", 1.5, 10};
+
   
   // Initialize Items to store in the vending machine.
-  Item chips;
-
-  initItem(chips, "Chips", 1.75, 10);
-
-  Item candyBar;
-  initItem(candyBar, "Candy bar", 1.5, 10);
-
-  Item fruitSnacks;
-  initItem(fruitSnacks, "Fruit snacks", 1.0, 10);
-
-  Item water;
-  initItem(water, "Water", 1.0, 10);
-
-  Item gatorade;
-  initItem(gatorade, "Gatorade", 1.5, 10);
+  
 
   // Display the Items as a menu to the user.
   cout << "----------------------------------------\n\n";
 
   cout << "ID#\n";
-  cout << "1.) " << toString(chips) << "\n";
-  cout << "2.) " << toString(candyBar) << "\n";
-  cout << "3.) " << toString(fruitSnacks) << "\n";
-  cout << "4.) " << toString(water) << "\n";
-  cout << "5.) " << toString(gatorade) << "\n\n";
+  cout << toString(vendingItem[1]) << "\n";
+ 
 
   cout << "----------------------------------------\n";
   
   // Display a greeting to the user with intstructions on how to use // the vending machine and their current $balance.
   cout << "|- Welcome Customer, Thankyou for choosing our vending machine!\n";
 
-  cout << "|- You currently have $25.00.\n";
   cout << "|- To purchase an item, enter the ID#\n";
   cout << "|- Enter 0 to exit to vending machine\n";
 
@@ -115,6 +103,7 @@ int main() {
       break;
     }else{
 
+      
     
 
     }
@@ -125,6 +114,21 @@ int main() {
  
 
 
+Item chips; initItem(chips, 1, "Chips", 1.75, 10);
+
+  Item candyBar; initItem(candyBar, 2, "Candy bar", 1.5, 10);
+
+  Item fruitSnacks; initItem(fruitSnacks, 3, "Fruit snacks", 1.0, 10);
+
+  Item water; initItem(water, 4, "Water", 1.0, 10);
+
+  Item gatorade; initItem(gatorade, 5, "Gatorade", 1.5, 10);
+
+
+
+
+
+}
 
 
 
